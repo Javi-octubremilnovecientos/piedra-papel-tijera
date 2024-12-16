@@ -25,26 +25,69 @@ body{
     height: 50%;
    width: 100%;
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
-   background-color: rgb(236, 245, 254);
-  
+   height: 88%;
+   width:23%;
+ 
+  background-image: url(../medios/);
 }
 
 .Uno,.Tres{
     height: 25%;
-   
-
     display: flex;
     justify-content: center;
     align-items: center;
    background-color: rgb(255, 214, 138);
 }
 
+.Uno #piedra{
+    animation: select 400ms ease-in-out  infinite alternate  ;
+    animation-play-state: running;
+   
+   
+}
+.Uno #papel{
+    animation: select 400ms ease-in-out 150ms infinite alternate  ;
+    animation-play-state: running;
+   
+
+}
+.Uno #tijera{
+
+    animation: select 400ms ease-in-out 300ms infinite alternate ;
+
+   animation-play-state: running;
+
+}
+
+@keyframes select {
+    0%{
+      box-shadow: none;
+      transform: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-transform: none;
+}
+    100%{
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        box-shadow: 2px 0px 30px rgba(120, 90, 0, 0.439);
+    }
+}
+
 h1{
     position: absolute;
-    font-size: 5em;
-    color: brown;
+    font-size: 7em;
+   text-decoration: solid;
+    color: rgb(255, 0, 0);
+    padding: 30px;
+    background-color: rgba(255, 228, 196, 0.503);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: none;
     transition: all 200ms;
@@ -69,34 +112,34 @@ h1{
    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    font-weight: 600;
    font-size: 2em;
+   cursor: pointer;
    color: aliceblue;
    box-shadow: 1px 1px 20px rgba(167, 137, 5, 0.537);
 }
-.Dos .result{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 88%;
-    width:23%;
-}
-.result #maquina{
+
+
+ #maquina{
    height: 45%;
    width: 102%;
-   background-color: #c1e9f8;
-   border:10px solid rgb(255, 195, 83);
-
+   background-color: #cbf1ff;
+   
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
    border-bottom-left-radius: 0px;
    border-bottom-right-radius: 0px;
    border-top-left-radius: 155px;
    border-top-right-radius: 155px;
 }
-.result #usuario{
+#usuario{
   height: 45%;
   width: 102%;
-  border:10px solid rgb(255, 195, 83);
+ 
   background-color:#cbf1ff;
   background-image: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   border-bottom-left-radius: 155px;
   border-bottom-right-radius: 155px;
   border-top-left-radius: 0px;
@@ -122,7 +165,7 @@ h1{
     -ms-transition: all 300ms;
     -o-transition: all 300ms;
 }
-.main div img:hover{
+.main .Tres img:hover{
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
